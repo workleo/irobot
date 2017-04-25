@@ -1,0 +1,5 @@
+    This small application was based on Frank Robert Anderson's
+article 'Basic Hello World with composer and php'.
+    As an example of a third-party package, lifei6671 php-captcha
+was taken. To use this package, you will need PHP-GD.
+    So now you can check whether you are human or not. . .  :)
