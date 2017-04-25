@@ -4,6 +4,7 @@ use classes\Asking;
 use classes\CaptchaPreparator;
 
 session_start();
+$_SESSION['page1']='start_page';
 ?>
 
 <html>
