@@ -1,0 +1,24 @@
+{
+  "name": "leo/irobot",
+  "description": "This is a test application with the composer",
+  "license": "LGPL-3.0",
+  "authors": [
+    {
+      "name": "Leonid",
+      "email": "antropoid2017@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.5.0",
+    "lifei6671/php-captcha": "v0.1.1"
+  },
+  "autoload": {
+    "psr-0": {
+      "classes": "src/"
+    }
+  },
+  "scripts": {
+    "test":["php test/test.php", "echo This is a test of composer.json scripts"]
+  }
+}
