@@ -14,8 +14,8 @@
     "lifei6671/php-captcha": "v0.1.1"
   },
   "autoload": {
-    "psr-0": {
-      "classes": "src/"
+    "psr-4": {
+      "classes\\": "src/classes/"
     }
   },
   "scripts": {
