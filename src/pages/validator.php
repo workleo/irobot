@@ -1,5 +1,5 @@
 <?php
-session_start();
+   session_start();
 ?>
 <html>
 <head>
@@ -12,7 +12,7 @@ session_start();
 <form>
     <?php
 
-    if ($_POST['captch'] != $_SESSION['captch']) {
+    if (strtolower($_POST['captch']) != strtolower($_SESSION['captch'])) {
         echo '<img src="../res/img/badrobot.gif" /><br>';
         echo '<div class="shadow font" style="max-width: 480px"> ' . 'You bad-bad robot!' . '</div>';
     } else {
