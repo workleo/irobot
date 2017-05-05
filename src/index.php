@@ -1,10 +1,7 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-use classes\Asking;
-use classes\CaptchaPreparator;
-
-session_start();
-$_SESSION['page1']='start_page';
+use classes\IndexControl;
+$ic=new IndexControl();
 ?>
 
 <html>
@@ -20,12 +17,12 @@ $_SESSION['page1']='start_page';
 
 <body style="background-color: black">
 <br/>
-<?php CaptchaPreparator::prepare_captcha(300, 100) ?>
+<? $ic->captcha(300,100) ?>
 <br/>
 
 <form action="./pages/validator.php" method="post" title="I ROBOT?">
     <label  >
-        <?php echo '<div  class="shadow bigfont" align="left" style="max-width: 300px; left: 0">' . Asking::ask_about_person() . '</div>' ?>
+        <div  class="shadow bigfont" align="left" style="max-width: 300px; left: 0"><? $ic->ask_person(); ?></div>
         <input class="shadow bigfont" type="text" name="captch" style="width: 300px"/>
         <br>
         <input class="shadow bigfont" type="submit"  name="send" value="Check" style="width: 100px;margin-left: 100px;"/>
