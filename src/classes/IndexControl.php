@@ -16,6 +16,6 @@ class IndexControl
     }
 
     public function ask_person (){
-        echo Asking::ask_about_person();
+        return Asking::ask_about_person();
     }
 }

@@ -34,14 +34,14 @@ class ValidatorControl
 
             } else {
                 $this->imgSrc = '../res/img/dancing-baby.gif';
-                $this->answer = 'Congratulations!<br> You are human !';
-                $this->header = 'Refresh: 3; url=profile.php';
+                $this->answer = "Congratulations!\n You are human !";
+                $this->header = 'Refresh: 3; url=proFile.html';
 
             }
         } else {
             $this->answer = 'I\'ll be back!';
             $this->header = 'Refresh: 3;url=../index.php';
-            $this->imgSrc = '""';
+            $this->imgSrc = '../res/img/mbeback.jpg';
         }
 
        echo header($this->header);
@@ -49,13 +49,13 @@ class ValidatorControl
 
 
     public function img_src(){
-        echo $this->imgSrc;
+        return $this->imgSrc;
     }
 
 
     public function textAnswer()
     {
-        echo $this->answer;
+        return $this->answer;
     }
 
 

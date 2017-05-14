@@ -1,21 +1,20 @@
 <?php
 require_once __DIR__.'/../../vendor/autoload.php';
 use classes\ValidatorControl as VC;
-$vc=new VC();
-?>
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../res/css/shadow.css">
-    <style></style>
-    <title>VALIDATOR</title>
-</head>
+try {
+    $vc=new VC();
+    $loader = new Twig_Loader_Filesystem('../pages');
+    $twig = new Twig_Environment($loader);
 
-<body style="background-color: black">
-<form action="profile.php">
-    <img style="max-width: 240px" src="<? $vc->img_src() ?>" /><br>
-    <div class="shadow font" style="word-wrap: break-word; max-width: 240px"> <? $vc->textAnswer(); ?></div>
-</form>
-</body>
-</html>
+
+    echo $twig->render('validator.html', array(
+        'picture' => $vc->img_src(),
+        'answer' => $vc->textAnswer(),
+        array('auto_reload' => true)
+    ));
+
+
+} catch (Exception $e) {
+    die ('ERROR: ' . $e->getMessage());
+};

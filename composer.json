@@ -11,7 +11,8 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.0",
-    "lifei6671/php-captcha": "~0.1.1"
+    "lifei6671/php-captcha": "~0.1.1",
+    "twig/twig": "^2.0"
   },
   "autoload": {
     "psr-4": {
