@@ -10,7 +10,7 @@ try {
 
     echo $twig->render('index.html', array(
         'captcha' => $ic->captcha(300, 100),
-        'person' => $ic->ask_person(),
+        'person' => $ic->askPerson(),
         array('auto_reload' => true)
     ));
 

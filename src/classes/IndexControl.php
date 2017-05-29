@@ -15,7 +15,7 @@ class IndexControl
         echo CaptchaPreparator::prepare_captcha($width, $height);
     }
 
-    public function ask_person (){
+    public function askPerson (){
         return Asking::ask_about_person();
     }
 }

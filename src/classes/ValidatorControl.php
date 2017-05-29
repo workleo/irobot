@@ -30,13 +30,10 @@ class ValidatorControl
                 $this->imgSrc = '../res/img/badrobot.gif';
                 $this->answer = 'You bad-bad robot!';
                 $this->header = 'Refresh: 3;url=../index.php';
-
-
             } else {
                 $this->imgSrc = '../res/img/dancing-baby.gif';
                 $this->answer = "Congratulations!\n You are human !";
                 $this->header = 'Refresh: 3; url=proFile.html';
-
             }
         } else {
             $this->answer = 'I\'ll be back!';
@@ -48,7 +45,7 @@ class ValidatorControl
     }
 
 
-    public function img_src(){
+    public function imgSrc(){
         return $this->imgSrc;
     }
 

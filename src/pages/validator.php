@@ -9,7 +9,7 @@ try {
 
 
     echo $twig->render('validator.html', array(
-        'picture' => $vc->img_src(),
+        'picture' => $vc->imgSrc(),
         'answer' => $vc->textAnswer(),
         array('auto_reload' => true)
     ));

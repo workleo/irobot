@@ -44,7 +44,7 @@ html,body{
 }
 
 
-td {
+td, .divtd {
     text-align: center;
     color: white;
     opacity: 0.98;

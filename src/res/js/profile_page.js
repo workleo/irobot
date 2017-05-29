@@ -171,10 +171,3 @@ function set_width() {
      });
  }
 
-/*
-function OpenInMyFrame(linkUrl) {
-    window.document.getElementById("cartmanFrame").src = linkUrl + "?autoplay=1";
-}
-*/
-
-
